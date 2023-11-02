@@ -1,0 +1,273 @@
+#root {
+  width: 100%;
+}
+
+.navbar {
+  width: 100%;
+  top:0;
+  z-index: 2;
+}
+
+.nav-item{
+  cursor: pointer;
+}
+
+.tambah-button {
+  border-radius: 5px;
+  border-color: #2b3035;
+  border-style: solid;
+  bottom: 30px;
+  box-shadow: 0 0 5px .5px #000;
+  height: 55px;
+  position: fixed;
+  right: 30px;
+  width: 55px;
+  padding: 0;
+}
+.tambah-button:hover{
+  background-color: #2b3035;
+  border-color: #2b3035;
+}
+
+.tambah-button:hover .icon-tambah{
+  color: white;
+}
+
+.icon-tambah {
+  color: #fff;
+  margin: 0 auto;
+  font-size: 35px;
+  margin: 0 auto;
+  color: #2b3035;
+}
+
+.mynote-apps{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  z-index: 1;
+}
+
+.not-arsip-container{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.arsip-container{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 80vw;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title-arsip{
+  width: 80vw;
+  font-size: 20px;
+}
+
+/* note container */
+.note-container{
+  width: 80vw;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  margin-top: 30px;
+  gap: 20px;
+}
+
+@media screen and (max-width: 707px){
+  .note-container,
+  .title-arsip,
+  .arsip-container,
+  .not-arsip-container{
+    width: 90vw;
+  }
+}
+
+.note-card{
+  flex-basis: calc(0.16 * (80vw - 100px));
+  max-width: 250px;
+  min-width: 175px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 13px;
+  border-style: solid;
+  border-color: #2b3035;
+}
+
+/* 6 item */
+@media screen and (max-width: 2000px){
+  .note-card{
+    flex-basis: calc(0.16 * (80vw - 100px));
+  }
+}
+
+/* 5 item */
+@media screen and (max-width: 1663px){
+  .note-card{
+    flex-basis: calc(0.2 * (80vw - 80px));
+  }
+}
+
+/* 4 item */
+@media screen and (max-width: 1325px){
+  .note-card{
+    flex-basis: calc(0.25 * (80vw - 60px));
+  }
+}
+
+/* 3 item */
+@media screen and (max-width: 988px){
+  .note-card{
+    flex-basis: calc(0.33 * (80vw - 40px));
+  }
+}
+
+/* 2 item */
+@media screen and (max-width: 628px){
+  .note-card{
+    flex-basis: calc(0.5 * (90vw - 20px));
+  }
+}
+
+/* 1 item */
+@media screen and (max-width: 411px){
+  .note-card{
+    margin: 0 auto;
+    flex-basis: 100vw;
+  }
+}
+
+.note-body{
+  margin-top: 5px;
+  margin-left: 5%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+.note-body .title-note{
+  font-size: 20px;
+  color: #2b3035;
+}
+
+.note-body .isi-note{
+  font-size: 15px;
+  color: #2b3035;
+}
+
+.note-body .date-note{
+  font-size: 12px;
+  color: #363738;
+}
+
+.note-button{
+  width: 100%;
+  max-width: 250px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  height: 40px;
+}
+
+.note-button .delete-button,
+.note-button .arsip-button{
+  width: 50%;
+  height: 40px;
+  border-style: solid;
+  border-color: #2b3035;
+  border-radius: 0px;
+  padding: 0;
+}
+.note-button .delete-button{
+  border-bottom-left-radius: 10px;
+}
+.delete-button:hover{
+  background-color: #2b3035;
+  color: white;
+}
+.note-button .arsip-button{
+  border-bottom-right-radius: 10px;
+}
+.arsip-button:hover{
+  background-color: #2b3035;
+  color: white;
+}
+.note-button .delete-button p,
+.note-button .arsip-button p{
+  margin: 0 auto;
+}
+
+/* form */
+.add-form{
+  width: 90%;
+  max-width: 667px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  padding: 20px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  color: #2b3035;
+  border-radius: 15px;
+  border-color: #2b3035;
+  border-style: solid;
+  justify-content: center;
+}
+
+.title-add{
+  font-size: 25px;
+}
+
+.length-title{
+  width: 90%;
+  max-width: 600px;
+}
+
+.length-title p{
+  margin:0;
+  margin-bottom: -10px;
+  font-size: 13px;
+  text-align: end;
+}
+
+.title-add,
+.input-title,
+.input-isi{
+  margin: 0;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 5px;
+}
+
+.btn-addform{
+  width: 90px;
+  padding: 0;
+  color: #2b3035;
+  border-style: solid;
+  border-color: #2b3035;
+  border-radius: 10px;
+  right: 0;
+}
+
+.btn-addform:hover{
+  background-color: #2b3035;
+  color: white;
+  border-color: #2b3035;
+}
+
+.btn-addform p{
+  margin: 0 auto;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
